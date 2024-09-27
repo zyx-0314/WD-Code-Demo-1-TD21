@@ -1,0 +1,179 @@
+/* Selectors */
+/* * Global Selector */
+/* h1, p, div, header, etc. Element Selector */
+/* .className Class Selector */
+/* #IdName ID Selector */
+
+/* Reset Code */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Reset Anchor Code */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  /* background-color: black; */
+}
+
+/* Used as guidelines, after use it is commonly deleted or commented out */
+/* .header, .header * {
+    outline: green dashed 1px;
+} */
+
+body {
+  background: radial-gradient(circle, rgb(12, 47, 48) 0%, rgb(0, 0, 0) 100%);
+}
+
+.header {
+  display: flex;
+  background: rgb(24, 91, 93);
+  background: radial-gradient(circle, rgb(12, 47, 48) 0%, rgb(0, 0, 0) 100%);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 5rem;
+  height: 10dvh;
+  border: 1px #7fffd481 solid;
+
+  .logo {
+    width: 5rem;
+  }
+
+  .left-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.btn {
+  padding: 0.7rem 1.7rem;
+
+  &.nav-btn {
+    /* outline: 3px dotted green; */
+    height: 10dvh;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px transparent solid;
+
+    transition: all ease 1s;
+
+    &.active {
+      border-bottom: 2px aquamarine solid;
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      border-bottom: 2px aquamarine solid;
+      background-color: aquamarine;
+      transform: scale(1.05);
+
+      p {
+        color: black;
+      }
+    }
+  }
+
+  &.call-to-action {
+    border: 1px black solid;
+    border-radius: 100px;
+    background-color: aliceblue;
+    height: fit-content;
+    box-shadow: 0rem 0rem 0px 0px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0rem 0rem 0px 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0rem 0rem 0px 0px rgba(255, 255, 255, 0.75);
+    transition: all ease 0.2s;
+
+    p {
+      color: black;
+    }
+
+    &:hover {
+      transform: translate(-0.5rem, -0.5rem);
+      box-shadow: 0.5rem 0.5rem 0px 0px rgba(255, 255, 255, 0.75);
+      -webkit-box-shadow: 0.5rem 0.5rem 0px 0px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0.5rem 0.5rem 0px 0px rgba(255, 255, 255, 0.75);
+    }
+
+    &:active {
+      transform: translate(-0.2rem, -0.2rem);
+      box-shadow: 0.2rem 0.2rem 0px 0px rgba(255, 255, 255, 0.75);
+      -webkit-box-shadow: 0.2rem 0.2rem 0px 0px rgba(255, 255, 255, 0.75);
+      -moz-box-shadow: 0.2rem 0.2rem 0px 0px rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  &.hero-btn {
+    text-transform: uppercase;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+  }
+}
+
+.hero {
+  height: calc(90dvh - 16rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 20rem;
+
+  h6 {
+    font-size: 2rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+
+    transition: all ease 0.4s;
+
+    &:hover {
+      color: aquamarine;
+      text-shadow: 0 0 20px aquamarine;
+    }
+  }
+
+  h4 {
+    font-size: 7rem;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 2rem;
+  }
+
+  .separator {
+    margin: 3rem 0;
+    border: 1px aquamarine solid;
+    width: 10%;
+  }
+
+  .description {
+    line-height: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .content-planet {
+    display: flex;
+    justify-content: center;
+    height: 50dvh;
+    overflow: hidden;
+    transform: scale(1.8) translate(0, 1.5rem);
+    z-index: -1;
+
+    .globe {
+      height: 300%;
+      object-fit: cover;
+    }
+  }
+}
